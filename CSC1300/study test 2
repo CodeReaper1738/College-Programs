@@ -1,0 +1,60 @@
+60 multiple choice
+No short answer
+
+Ch 4, 5, 6 parallel programming 
+
+Loops 
+	Given some code that will contain while loop, for loop
+		What is the expected output?
+		How many times does the loop iterate
+	While loop pretest loop, do-while post test, for pretest loop
+	When do you use which loop?
+		While loop - input validation, other random cases
+		Do- while loop - menu based programs, if you want to run your program again (based on what the user wants)
+		For loop - when you have an initialization statement, expression, & an update..... also when you know the number or iterations.... good for arrays
+	For loop - initialization only happens once
+	Nester loop
+	Infinite loop- how to prevent
+	Given some code that contains increment &/ or decrement operator, what is the expected output
+	File Access 
+	
+	
+	To write
+	
+	IF you create a variable with fstream, you can read or write to/ from the file &you have to indicate the open mode(ios::in, ios::out,ios::app)
+	Select the correct syntax for writing to a file
+	ofstream outFile;
+	
+Arrays
+	Unlike regular variables, arrays can hold multiple values - that are the same data type
+	The values in the arrays are called elements
+	To access an element, use the array name with the subscript/index
+	Subscript/index numbering begins with 0 
+	Know correct syntax to define an array
+	double numbers[100];
+	Be able to recognize a full initialization list, implicit array sizing, and a partial initialization list
+	int nums[100] = {86,43};
+	By using the same subscript, you can build relationships between data stored in two or more arrays.... parallel arrays.
+	The name of an array stores the memory address of the first element
+	A 2D array is like several identical arrays put together.
+	2D arrays are viewed as rows and columns
+	double nums[4][3];
+	Given an array definition
+		Tell where a certain value is stored in the array
+		Tell what would be printed out if cout a particular element
+	An array can be easily stepped through using a for loop.
+	To assign the contents of one array to another, you must use a for loop.
+	string names[100];
+	string addresses[100];
+	To pass an array as an argument to a function, pass the name of the array
+	What file do you include to use the vector standard template library
+	
+Parallel Programming
+	computer has multiple cores - programs do not automatically run in parallel.
+	What is clock rate?
+	What is the goal of parallel programming?
+	
+	
+	
+	
+	
