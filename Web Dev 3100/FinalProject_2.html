@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Chicken Coop</title>
+  <link rel="stylesheet" type="text/css" href="css/lib/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body> 
+  <script src="https://kit.fontawesome.com/b07fbe0150.js" crossorigin="anonymous"></script>
+  <div style="background-color: #8cb369;" class="">
+    <div style="display:none;" id="divRegister" class="col-12 row">
+      <div class="d-none d-md-block col-6 d-flex justify-content-center align-items-center">
+          <h1 class="text-center mt-5">Register Account</h1>
+            <div style="display:flex; justify-content: center; align-items: center;">
+              <img src="images/lib/smart-farm-logo-smart-farm.png" alt="Logo" class="p-5">
+            </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <div class="card col-12 col-md-10 offset-md-1">
+              <div class="card-head">
+                  <h3 class="col-12 text-center mt-1">Create Account</h3>
+                </div>
+                  <div class="card-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="txtCreateFirstName" class="form-label mt-4">First Name</label>
+                        <input type="text" class="form-control" id="txtCreateFirstName" placeholder="First Name" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="txtCreateLastName" class="form-label mt-4">Last Name</label>
+                          <input type="text" class="form-control" id="txtCreateLastName" placeholder="Last Name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="txtCreateAddress" class="form-label mt-4">Address</Address></label>
+                        <input type="text" class="form-control" id="txtStreet1" placeholder="Street 1">
+                          <input type="text" class="form-control" id="txtStreet2" placeholder="Street 2">
+                          <input type="text" class="form-control" id="txtCity" placeholder="City">
+                          <input type="text" class="form-control" id="txtState" placeholder="State">
+                          <input type="text" class="form-control" id="txtZip" placeholder="Zip">
+                        </div>
+                        <div class="form-group">
+                          <label for="txtCreateCoopAddress" class="form-label mt-4">Address of the Coop</label>
+                          <input type="text" class="form-control" id="txtCoopStreet1" placeholder="Street 1">
+                          <input type="text" class="form-control" id="txtCoopStreet2" placeholder="Street 2">
+                          <input type="text" class="form-control" id="txtCoopCity" placeholder="City">
+                          <input type="text" class="form-control" id="txtCoopState" placeholder="State">
+                          <input type="text" class="form-control" id="txtCoopZip" placeholder="Zip">
+                        </div>
+                        <div class="form-group">
+                          <label for="txtCreateEmail" class="form-label mt-4">Email</label>
+                          <input type="email"class="form-control" id="txtCreateEmail" placeholder="user@email.com" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="txtCreatePassword" class="form-label mt-4">Password</label>
+                          <input type="password" class="form-control" id="txtCreatePassword" placeholder="Password" required> 
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCoopID" class="form-label mt-4">Enter Coop ID</label>
+                            <input type="text" class="form-control" id="txtCoopID" placeholder="Coop ID" required>
+                        </div>
+                        <button class="btn btn-primary col-12 mt-4" type="button" id="btnRegister">Register Account</button>
+                        <button class="btn btn-secondary col-12 mt-2 btnSwap" type="button">Back To Login</button>
+                      </form>
+                  </div>
+              </div>
+          </div>        
+      </div>
+      <div id="divLogin" class="col-12 mt-5 row">
+          <div class="d-none d-md-block col-6 d-flex justify-content-center align-items-center">
+              <h1 class="text-center mt-5">Login</h1>
+              <div style="display:flex; justify-content: center; align-items: center;">
+                  <img src="images/lib/smart-farm-logo-smart-farm.png" alt="Logo" class="p-5">
+              </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center mt-5 align-items-center">
+              <div class="card col-12 col-md-10 offset-md-1">
+                  <div class="card-head">
+                      <h3 class="col-12 text-center mt-1">Login</h3>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="mb-3">
+                              <input class="form-control" id="txtEmail" type="email" aria-label="Enter Email Address" placeholder="EmailAddress@gmail.com" required>
+                              <div class="invalid-feedback">Please Enter Your Email Address</div>
+                          </div>
+                          <div class="mb-3">
+                              <input class="form-control" id="txtPassword" type="password" aria-label="Enter Password" placeholder="Password" required>
+                              <div class="invalid-feedback">You Must Enter a Password</div>
+                          </div>
+                          <button type="button" class="btn btn-link btnForgot" id="btnForgotPassword" >Forgot Password?</button>
+                          <button class="btn btn-primary mt-4 col-12" type="button" id="btnLogin">Login</button>
+                          <button class="btn btn-secondary col-12 mt-2 btnSwapAlt" type="button">Create Account</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="display:none;" id="divForgot" class="col-12 mt-5 row">
+          <div class="d-none d-md-block col-6 d-flex justify-content-center align-items-center">
+              <h1 class="text-center mt-5">Forgot Password</h1>
+              <div style="display:flex; justify-content: center; align-items: center;">
+                  <img src="images/lib/smart-farm-logo-smart-farm.png" alt="Logo" class="p-5">
+              </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center mt-5 align-items-center">
+              <div class="card col-12 col-md-10 offset-md-1">
+                  <div class="card-head text-center">
+                      <h3 class="col-12 text-center mt-1">Forgot Password?</h3>
+                      <p class="mt-4" >You can reset your password here.</p>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="mb-3">
+                              <input class="form-control" id="txtEmail" type="email" aria-label="Enter Email Address" placeholder="EmailAddress@gmail.com" required>
+                              <div class="invalid-feedback">Please Enter Your Email Address</div>
+                          </div>
+                          <button class="btn btn-primary mt-1 col-12" type="button" id="btnLogin">Reset Password</button>
+                          <button type="button" class="btn btn-link col-12 btnLoginAgain">Login</button>
+                          <button type="button" class="btn btn-link col-12 btnCreateAgain">Create Account</button> 
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div style="display:none; background-color: #f8f9fa;" id="divDashboard" class="col-12 mt-2 row">
+      <header class="header">
+        <div class="logo">
+          <a href="#">Simple Farm</a>
+          <div class="search_box">
+            <input type="text" placeholder="Search Simple Farm">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+    
+        <div class="header-icons">
+          <i class="fas fa-bell"></i>
+          <div class="account">
+            <img src="images/lib/smart-farm-logo-smart-farm.png" alt="">
+            <h5>John Doe</h5>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <nav>
+          <div class="side_navbar">
+            <ul> 
+              <a href="#" class="active"><i class="fas fa-solid fa-house"></i>Dashboard</a>
+              <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" href="#"><i class="fas fa-solid fa-wrench"></i>
+                Settings
+              </a>
+              <div class="collapse" id="collapseExample">
+                <button class=" btn row col-lg-5" style="background-color: #ffffff; border: none;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEx"><i class="bi bi-arrow-right"></i>
+                    Door
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasEx" aria-labelledby="offcanvas"> 
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Time</h5>
+                      <button data-settings="OpenDoor" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Open</h5>
+
+                      <input class="form-check" type="time" id="openngdoortime">
+                      <button type="button" class=" btn btn-primary" id="btnOpen" aria-label="submit">open submit</button>
+
+                      <div class="form-check form-switch mt-2">
+                          <label class="form-check-label" for="flexSwitchCheckDefault">Manually Open Door</label>
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                      <h5 class="offcanvas-title mt-4" id="offcanvasExampleLabel">Close</h5>
+
+                      <input class="form-check" type="time" id="closedoortime">
+                      <button type="button" class=" btn btn-primary" id="btnClose" aria-label="submit">close submit</button>
+
+                      <div class="form-check form-switch mt-2">
+                          <label class="form-check-label" for="flexSwitchCheckDefault">Manually Close Door</label>
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                      </div>
+                    </div>
+                </div>
+                <div class="w-100 d-none d-md-block"></div>
+                  <button class=" btn row col-lg-5" style="background-color: #ffffff; border: none;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEx2"><i class="bi bi-arrow-right"></i>
+                      Light
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasEx2" aria-labelledby="offcanvas"> 
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Time</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">On</h5>
+
+                          <input class="form-check" type="time" id="lightontime">
+                          <button type="button" class=" btn btn-primary" id="btnLightOn" aria-label="submit">Turn On</button>
+
+                          <div class="form-check form-switch mt-2">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Manually Turn on Light</label>
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                              
+                          </div>
+                          <h5 class="offcanvas-title mt-4" id="offcanvasExampleLabel">Off</h5>
+
+                          <input class="form-check" type="time" id="lightofftime">
+                          <button type="button" class=" btn btn-primary" id="btnLightOff" aria-label="submit">Turn Off</button>
+
+                          <div class="form-check form-switch mt-2">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Manually Turn off Light</label>
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="w-100 d-none d-md-block"></div>
+                  <button class=" btn row col-lg-5" style="background-color: #ffffff; border: none;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEx3"><i class="bi bi-arrow-right"></i>
+                      Alarm
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasEx3" aria-labelledby="offcanvas"> 
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Alarm</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <h5 class="offcanvas-title" id="lowWaterAlarm">Low Water Alarm</h5>
+                          <input type="range" class="form-range" id="customRange1">
+                         
+                          <button type="button" class=" btn btn-primary" id="btnLowWater" aria-label="submit">Set Low Water Level </button>
+
+                          <h5 class="offcanvas-title" id="lowFoodAlarm">Low Food Alarm</h5>
+                          <input type="range" class="form-range" id="customRange2">
+                          <button type="button" class=" btn btn-primary" id="btnLowFood" aria-label="submit">Set Low Food Level </button>
+                      </div>
+                  </div>
+                  <div class="w-100 d-none d-md-block"></div>
+                  <button class=" btn row col-lg-5" style="background-color: #ffffff; border: none;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEx4"><i class="bi bi-arrow-right"></i>
+                      Temp
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasEx4" aria-labelledby="offcanvas"> 
+                      <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Temp</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <div class="form-check form-switch mt-2">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Manually Turn On Heater</label>
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                          </div>
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Heater</h5>
+                          <label for="customRange1" class="form-label">Fan Control</label>
+                          <input type="range" class="form-range" min="0" max="50" step="10" id="customRange3">
+                          <button type="button" class=" btn btn-primary" id="btnFanTemp" aria-label="submit">Set Fan Temp</button>
+                          <p class="mt-4">Timer</p>
+                        
+                          <select class="form-select" aria-label="Default select example">
+                              <option selected>OFF</option>
+                              <option value="1">5 minutes</option>
+                              <option value="2">10 minutes</option>
+                              <option value="3">15 minutes</option>
+                              <option value="3">20 minutes</option>
+                              <option value="3">25 minutes</option>
+                              <option value="3">30 minutes</option>
+                              <option value="3">35 minutes</option>
+                              <option value="3">40 minutes</option>
+                              <option value="3">45 minutes</option>
+                              <option value="3">50 minutes</option>
+                              <option value="3">55 minutes</option>
+                              <option value="3">60 minutes</option>
+                          </select>
+                          <div class="form-check form-switch mt-2">
+                              <label class="form-check-label mt-5" for="flexSwitchCheckDefault">Manually Turn On Fan</label>
+                              <input class="form-check-input mt-5" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                          </div>
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Fan</h5>
+                          <label for="customRange1" class="form-label">Heater Control</label>
+                          <input type="range" class="form-range" min="50" max="100" step="10" id="customRange4">
+                          <button type="button" class=" btn btn-primary" id="btnHeaterTemp" aria-label="submit">Set Heater Temp</button>
+                          <p class="mt-4">Timer</p>
+                          <select class="form-select" aria-label="Default select example">
+                              <option selected>OFF</option>
+                              <option value="1">5 minutes</option>
+                              <option value="2">10 minutes</option>
+                              <option value="3">15 minutes</option>
+                              <option value="3">20 minutes</option>
+                              <option value="3">25 minutes</option>
+                              <option value="3">30 minutes</option>
+                              <option value="3">35 minutes</option>
+                              <option value="3">40 minutes</option>
+                              <option value="3">45 minutes</option>
+                              <option value="3">50 minutes</option>
+                              <option value="3">55 minutes</option>
+                              <option value="3">60 minutes</option>
+                          </select>
+                      </div>
+                  </div>                
+              </div>
+              <a href="#"><i class="fas fa-solid fa-bell"></i>Warnings</a>
+              <button type="button" class=" btn btn-light" id="btnLogout" aria-label="logout" ><i class="fas fa-solid fa-right-from-bracket"></i>Logout</a>
+            </ul> 
+          </div>
+        </nav>
+    
+        <div class="main-body">
+          <h2>Dashboard</h2>
+          <div class="promo_card">
+            <h1>Welcome to Simple Farm</h1>
+            <span>Farmer's Best Friend</span>
+            <button>Learn More</button>
+          </div>
+          
+          <div class="main-cards">
+
+              <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">HARVEST</p>
+                  </div>
+                  <div class="form-group">
+                    <span class="text-primary font-weight-bold" id="Harvest">10</span>
+                    <button class="btn btn-secondary col-12 mt-2 " type="button" id="addEggs">Add Eggs</button>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">TEMPREATURE</p>
+                  </div>
+                  <span class="text-primary font-weight-bold" id="Temp"></span>
+              </div>
+              <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">HUMIDITY</p>
+                  </div>
+                  <span class="text-primary font-weight-bold" id="Humidity"></span>
+              </div>
+              <div class="card">
+                  <div class="card-inner">
+                    <p class="text-primary">NEXT CLEAN OUT</p>
+                  </div>
+                  <span class="text-primary font-weight-bold">1/15/2023</span>
+              </div>
+          </div>
+          <div class="card">
+            <div class="card-head text-center align-items-center justify-content-center">
+                <h3>Temp/Humid Chart</h3>
+            </div>
+            <div class="card-body">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/lib/sweetalert2@11.js" ></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let strBaseURL = "https://simplecoop.swollenhippo.com/";
+        var ctxL = document.getElementById("lineChart").getContext('2d');
+        
+
+        // $(document).on('click', function(){
+        //     let strSetting = $(this).attr('data-setting');
+        //     let strValue = $(this).closest('valueEntry').val();
+
+        //     $.post(strBaseURL + 'settings.php',{SessionID: strSessionID,setting: strSetting, value: strValue})
+        // })
+        
+        
+        
+        
+        $('#btnLogin').on('click',function() {
+
+            let blnError = false;
+            let strErrorMessage = '';
+            let emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,64}$/;
+           
+            if(!$('#txtEmail').val().match(emailPattern)){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a valid email</p>';
+            }
+            if(!$('#txtPassword').val().match(passwordPattern)){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a password</p>';
+            }
+
+            if(blnError == true){
+                Swal.fire({
+                    icon: 'error',
+                    html: strErrorMessage
+                })
+            } else {
+                $.post(strBaseURL + 'sessions.php',{Email:$('#txtEmail').val(),Password:$('#txtPassword').val()})
+                .done(function(session){
+                    let objSession = JSON.parse(session);
+                    if(objSession.SessionID){
+                        strSessionID = objSession.SessionID;
+                        sessionStorage.setItem('SessionID',objSession.SessionID);
+                        console.log('end setting session');
+                        $('#divLogin').slideToggle();
+                        $('#divDashboard').slideToggle();
+
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            html: '<p>Creating session failed</p>'
+                        })
+                    }
+
+                })
+            }           
+        })
+        $('.btnSwap').on('click',function() {
+            $('#divRegister').slideUp();
+            $('#divLogin').slideDown();
+           
+        })
+
+        $('.btnSwapAlt').on('click',function() {
+            $('#divRegister').slideDown();
+            $('#divLogin').slideUp();
+        })
+
+        $('.btnForgot').on('click',function() {
+            $('#divLogin').slideUp();
+            $('#divForgot').slideDown();
+        })
+        $('.btnLoginAgain').on('click',function() {
+            $('#divForgot').slideUp();
+            $('#divLogin').slideDown();
+        })
+
+        $('.btnCreateAgain').on('click',function() {
+            $('#divForgot').slideUp();
+            $('#divRegister').slideDown();
+        })
+
+        $('#btnLogout').on('click', function() {
+            sessionStorage.removeItem('SessionID');
+            $('#divDashboard').slideUp();
+            $('#divLogin').slideDown();
+        })
+
+
+        $('#btnRegister').on('click',function() {
+            let blnError= false;
+            let strErrorMessage = '';
+            let emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,64}$/;
+            let coopPattern = /^[0-9a-zA-Z]+$/;
+
+            if($('#txtCreateFirstName').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a first name</p>';
+            }
+            
+            if($('#txtCreateLastName').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a last name</p>';
+            }
+            if($('#txtCoopStreet1').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a Street 1</p>';
+            }
+            if($('#txtCoopStreet2').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a Street 2</p>';
+            }
+            if($('#txtCoopCity').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a City</p>';
+            }
+            if($('#txtCoopState').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a State </p>';
+            }
+            if($('#txtCoopZip').val().length < 1){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a ZIP </p>';
+            }
+            if(!$('#txtCreateEmail').val().match(emailPattern)){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a valid email</p>';
+            }
+            if(!$('#txtCreatePassword').val().match(passwordPattern)){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a password</p>';
+            }
+            if(!$('#txtCoopID').val().match(coopPattern)){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a Coop ID</p>';
+            }
+
+            if(blnError == true){
+                Swal.fire({
+                    icon: 'error',
+                    html: strErrorMessage
+                })
+            } else {
+                $.post(strBaseURL + 'users.php',{Email:$('#txtCreateEmail').val(),FirstName:$('#txtCreateFirstName').val(),LastName:$('#txtCreateLastName').val(),Password:$('#txtCreatePassword').val(),CoopID: $('#txtCoopID').val()})
+                .done(function(result){
+                    let objResult = JSON.parse(result);
+                    if(objResult.Outcome){
+                        $.post(strBaseURL + 'useraddress.php',
+                        {
+                            Email:$('#txtCreateEmail').val(), 
+                            Street1: $('#txtCoopStreet1').val(),
+                            Street2: $('#txtCoopStreet2').val(),
+                            City: $('#txtCoopCity').val(),
+                            State: $('#txtCoopState').val(),
+                            Zip: $('#txtCoopZip').val()
+
+                        }).done(function(result){
+                            
+                        })
+
+                        $.post(strBaseURL + 'sessions.php',{Email:$('#txtCreateEmail').val(),Password:$('#txtCreatePassword').val()})
+                        .done(function(session){
+                            let objSession = JSON.parse(session);
+                            if(objSession.SessionID){
+                                sessionStorage.setItem('SessionID',objSession.SessionID);
+                                $('#divRegister').slideToggle();
+                                $('#divDashboard').slideToggle();
+
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    html: '<p>Creating session failed</p>'
+                                })
+                            }
+
+                        })
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            html: '<p>Creating user failed</p>'
+                        })
+                    }
+                })
+                
+            }
+            $.post(strBaseURL + 'coop.php').done(function(session){
+                const objResult = JSON.parse(session);
+                if(objResult.CoopID){
+                    sessionStorage.setItem("CoopID", $('#txtCoopID').val());
+                }
+                
+            })
+        })
+
+      
+        let arrTemp = [];
+        let arrHumidity = [];
+        let arrDates = [];
+        var strSessionID = '';
+        $.getJSON(strBaseURL + 'environment.php',{SessionID: strSessionID, days:7}).done(function(result){
+            console.log(result);
+            if(result){
+                if(result.length > 0){
+                    $.each(result,function(index,logEntry){
+                        arrTemp.push(logEntry.Temperature);
+                        arrHumidity.push(logEntry.Humidity);
+                        arrDates.push(logEntry.ObservationDateTime);
+                        document.getElementById("Temp").textContent=logEntry.Temperature;
+                        document.getElementById("Humidity").textContent=logEntry.Humidity;
+                    })
+                    console.log(arrTemp);
+                    console.log(arrHumidity);
+                    console.log(arrDates);
+
+                    var myLineChart = new Chart(ctxL, {
+                    type: 'line',
+                    data: {
+                        labels: arrDates,
+                        datasets: [{
+                                label: "Temperature",
+                                data: arrTemp,
+                                backgroundColor: [
+                                    'rgba(105, 0, 132, .2)',
+                                ],
+                                borderColor: [
+                                    'rgba(200, 99, 132, .7)',
+                                ],
+                                borderWidth: 2
+                            },
+                            {
+                                label: "Humidity",
+                                data: arrHumidity,
+                                backgroundColor: [
+                                    'rgba(0, 137, 132, .2)',
+                                ],
+                                borderColor: [
+                                    'rgba(0, 10, 130, .7)',
+                                ],
+                                borderWidth: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true
+                    }
+                });
+                }
+            }
+        })
+        $.post('https://simplecoop.swollenhippo.com/settings.php',{SessionID:strSessionID,setting:"foodLevel", value:"8"}).done(function(result){
+            
+            
+            if($('#customRange2').val() <= 8){
+                Swal.fire({
+                        icon: 'warning',
+                        text: 'Looks like you have a low food level'
+                    })
+            }
+            
+        })
+        $.post('https://simplecoop.swollenhippo.com/settings.php',{SessionID:strSessionID,setting:"waterLevel", value:"29"}).done(function(result){
+            
+            if($('#customRange1').val() <= 29){
+                Swal.fire({
+                        icon: 'warning',
+                        text: 'Looks like you have a low water level'
+                    })
+            }
+            
+        })
+
+        $('#btnForgotPassword').on('click',function() {
+            let strError = false;
+            let strErrorMessage = '';
+            let emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            if($('#txtforgotEmail') == emailPattern){
+                blnError = true;
+                strErrorMessage += '<p>You must enter a valid email address</p>';
+            }
+        })
+        
+        var eggs = [];
+        var eggDays = [];
+        var count = 0;
+
+        $.getJSON(strBaseURL + 'eggs.php',{SessionID: strSessionID, days:7}).done(function(result){
+            console.log(result);
+
+                if(result){
+                    if(result.length > 0){
+                        let intEggs = 0;
+                        $.each(result,function(index,logEntry){
+                            eggs.push(logEntry.eggs);
+                            eggDays.push(logEntry.eggDays);
+                            count += logEntry.Harvest;
+                            document.getElementById("Harvest").textContent=count;
+                        })
+
+                        console.log(eggs);
+                        console.log(eggDays);
+                    }
+                }
+            })
+
+        $('#addEggs').on('click',function(){    
+            $.post(strBaseURL + 'eggs.php',{SessionID: strSessionID, ObservationDateTime: arrDates[7], eggs: count})
+            .done(function(result){
+                let objResult = JSON.parse(result);
+                if (objResult.Outcome){
+                    sessionStorage.setItem('LogID',objResult.LogID);
+                    count++;
+                    document.getElementById("Harvest").textContent=count;
+                }
+                
+            
+            })
+        })
+
+        $('#btnOpen').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnOpen", value:$('#openngdoortime').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnClose').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnClose", value:$('#closedoortime').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnLightOn').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnLightOn", value:$('#lightontime').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnLightOff').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnLightOff", value:$('#lightofftime').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+       
+        $('#btnLowWater').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnLowWater", value:$('#customRange1').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnLowFood').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnLowFood", value:$('#customRange2').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnFanTemp').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnFanTemp", value:$('#customRange3').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        $('#btnHeaterTemp').on('click', function(){
+            $.post(strBaseURL + 'settings.php',{SessionID: strSessionID, setting:"btnHeaterTemp", value:$('#customRange4').val()}).done(function(result) {
+                console.log(result);
+            })
+        })
+
+        
+    </script>
+</body>
+</html>
+
