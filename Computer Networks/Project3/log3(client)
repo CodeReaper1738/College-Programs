@@ -1,0 +1,23 @@
+Sending Hello Packet
+Received Data: Version: 17, Type: 1, length 5 
+Version accepted
+Received Message hello
+Enter a message (LIGHTON, LIGHTOFF, DISCONNECT): LIGHTON
+Sending Command
+Received Data: Version: 17, Type: 1, length 7 
+Version accepted
+Received Message success
+Command Successfull
+Enter a message (LIGHTON, LIGHTOFF, DISCONNECT): LIGHTOFF
+Sending Command
+Received Data: Version: 17, Type: 2, length 7 
+Version accepted
+Received Message success
+Command Successfull
+Enter a message (LIGHTON, LIGHTOFF, DISCONNECT): DISCONNECT
+Sending Command
+Received Data: Version: 17, Type: 3, length 13 
+Version accepted
+Received Message Disconnecting
+Error Running Command
+Closing Socket
